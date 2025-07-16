@@ -20,10 +20,14 @@ public class GameManager : MonoBehaviour
     public TMP_Text countdownText;
     public int countdown;
 
+    [Header("EndScreen UI")]
+    public TMP_Text endUI_score;
+    public TMP_Text endUI_time;
+
     [Header("Screens")]
     public GameObject countdownUI;
     public GameObject gameUI;
-
+    public GameObject endUI;
 
 
     // Start is called before the first frame update
@@ -77,7 +81,23 @@ public class GameManager : MonoBehaviour
         timeActive = false;
         player.enabled = false;
 
+        // set UI to display stats
+        endUI_score.text = "Score: " + player.coinCount;
+        endUI_time.text = "Time: " + (time * 10).ToString("F2");
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        SetScreen(endUI);
+
     }
+
+    public void OnRestartButton()
+    {
+        // restart the scene to play again
+        SceneManager.LoadScene(0);
+    }
+
 
 
     // Update is called once per frame
@@ -100,6 +120,7 @@ public class GameManager : MonoBehaviour
         // diable all other screens
         gameUI.SetActive(false);
         countdownUI.SetActive(false);
+        endUI.SetActive(false);
 
         // activate requested screen
         screen.SetActive(true);
