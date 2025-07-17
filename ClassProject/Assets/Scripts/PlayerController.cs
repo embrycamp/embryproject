@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.name == "Enemy")
         {
-            health -= 5;
+            health -= 25;
         }  
         if (other.gameObject.name == "FallCollider")
         {

@@ -36,7 +36,7 @@ public class EnemieBehavior : MonoBehaviour
 
     void MoveToNextPatrolLocation()
     {
-        if (locations.Count > 0)
+        if (locations.Count == 0)
         {
             return;
         }
