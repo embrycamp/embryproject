@@ -99,8 +99,6 @@ UnityEngine.Application::OpenURL
 UnityEngine.Application::get_platform
 UnityEngine.AsyncOperation::InternalDestroy
 UnityEngine.Audio.AudioPlayableOutput::InternalSetEvaluateOnSeek
-UnityEngine.AudioSource::PlayHelper
-UnityEngine.AudioSource::set_clip
 UnityEngine.Avatar::get_humanDescription_Injected
 UnityEngine.AvatarMask::GetHumanoidBodyPartActive
 UnityEngine.AvatarMask::get_transformCount
